@@ -1,9 +1,6 @@
 import sys
 import cv2 as cv
 
-#importando a biblioteca OpenCv
-
-
 def main(argv):
 
     ddepth = cv.CV_16S
@@ -12,7 +9,7 @@ def main(argv):
 
     imageName = argv[0] \
         if len(argv) > 0 \
-        else 'aviao.png'
+        else 'img/paisagem.png'
 
     src = cv.imread(cv.samples.findFile(imageName), cv.IMREAD_COLOR)
 
@@ -35,5 +32,6 @@ def main(argv):
     cv.waitKey(0)
 
     return 0
+
 if __name__ == "__main__":
     main(sys.argv[1:])
